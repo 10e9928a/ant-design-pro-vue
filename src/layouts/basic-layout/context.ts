@@ -19,14 +19,6 @@ const layoutStateFunc = (props: ProLayoutProps, methods: ProLayoutProviderMethod
   const headerHeight = computed(() => props.headerHeight)
   const contentWidth = computed(() => props.collapsedWidth)
   const copyright = computed(() => props.copyright)
-  /**
-   * 移动端的处理方式
-   */
-  const isMobile = computed(() => props.isMobile)
-  const mobileCollapsed = shallowRef(false)
-  const handleMobileCollapsed = () => {
-    mobileCollapsed.value = !mobileCollapsed.value
-  }
 
   const header = computed(() => props.header)
   const menu = computed(() => props.menu)
@@ -61,11 +53,8 @@ const layoutStateFunc = (props: ProLayoutProps, methods: ProLayoutProviderMethod
     fixedSider,
     headerHeight,
     theme,
-    isMobile,
-    mobileCollapsed,
     contentWidth,
     copyright,
-    handleMobileCollapsed,
     header,
     menu,
     footer,
