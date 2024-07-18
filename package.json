@@ -12,17 +12,17 @@
     "lint": "eslint src --fix"
   },
   "dependencies": {
-    "@ant-design/icons-vue": "^6.1.0",
-    "@ctrl/tinycolor": "^3.6.0",
-    "@v-c/utils": "^0.0.23",
-    "@vueuse/core": "^10.1.2",
-    "ant-design-vue": "4.0.0-beta.2",
-    "axios": "^1.4.0",
+    "@ant-design/icons-vue": "^7.0.1",
+    "@ctrl/tinycolor": "^4.1.0",
+    "@v-c/utils": "^0.0.26",
+    "@vueuse/core": "^10.11.0",
+    "ant-design-vue": "4.2.3",
+    "axios": "^1.7.2",
     "lodash-es": "^4.17.21",
-    "pinia": "^2.0.35",
-    "vue": "^3.2.47",
-    "vue-i18n": "^9.2.2",
-    "vue-router": "^4.1.6"
+    "pinia": "^2.1.7",
+    "vue": "^3.4.29",
+    "vue-i18n": "^9.13.1",
+    "vue-router": "^4.3.3"
   },
   "devDependencies": {
     "@mistjs/eslint-config-vue": "^0.0.5",

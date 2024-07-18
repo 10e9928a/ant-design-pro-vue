@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import Header from '../components/header/index.vue'
 import SiderMenu from '../components/sider-menu/index.vue'
-import DrawerMenu from '../components/drawer-menu/index.vue'
 import Menu from '../components/menu/index.vue'
-import GlobalFooter from '../components/global-footer/index.vue'
 import { proLayoutProps } from './typing'
 import { useLayoutProvider } from './context'
 const props = defineProps(proLayoutProps)
@@ -42,18 +40,13 @@ const contentCls = computed(() => {
   <div class="ant-pro-basicLayout" :data-theme="theme">
     <a-layout>
       <template v-if="menu">
-        <SiderMenu v-if="layout !== 'top' && !isMobile" />
+        <SiderMenu v-if="layout !== 'top'" />
       </template>
       <a-layout>
         <template v-if="header">
           <Header>
             <template v-if="$slots.headerActions" #headerActions>
               <slot name="headerActions" />
-            </template>
-            <template v-if="$slots.headerContent || layout === 'top'" #headerContent>
-              <slot name="headerContent">
-                <Menu v-if="!isMobile" />
-              </slot>
             </template>
           </Header>
         </template>
@@ -63,18 +56,8 @@ const contentCls = computed(() => {
             <slot />
           </div>
         </a-layout-content>
-        <a-layout-footer v-if="footer" style="background-color: transparent;">
-          <slot name="footerRender">
-            <GlobalFooter :copyright="copyright">
-              <template v-if="$slots.renderFooterLinks" #renderFooterLinks>
-                <footer-links />
-              </template>
-            </GlobalFooter>
-          </slot>
-        </a-layout-footer>
       </a-layout>
     </a-layout>
-    <DrawerMenu v-if="menu" />
   </div>
 </template>
 

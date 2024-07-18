@@ -62,7 +62,6 @@ export const proLayoutProps = {
   collapsed: booleanType<boolean>(false),
   theme: stringType<ThemeType>('light'),
   onCollapsed: eventType<(collapsed: boolean) => void>(),
-  isMobile: booleanType(),
   contentWidth: stringType<ContentWidth>(),
   header: booleanType<boolean>(true),
   footer: booleanType<boolean>(true),
