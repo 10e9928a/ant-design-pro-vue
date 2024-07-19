@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { AlipayCircleFilled, LockOutlined, MobileOutlined, TaobaoCircleFilled, UserOutlined, WeiboCircleFilled } from '@ant-design/icons-vue'
-import GlobalLayoutFooter from '~/layouts/components/global-footer/index.vue'
+// import GlobalLayoutFooter from '~/layouts/components/global-footer/index.vue'
 // import { loginApi } from '~/api/common/login'
 const appStore = useAppStore()
 const { layoutSetting } = storeToRefs(appStore)
