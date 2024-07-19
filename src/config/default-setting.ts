@@ -1,10 +1,10 @@
 import type { LayoutSetting } from '~@/stores/app'
 
 export default {
-  title: 'Ant Design Pro',
+  title: 'Maple 测试平台',
   theme: 'inverted',
   logo: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
-  collapsed: true,
+  collapsed: false,
   drawerVisible: false,
   colorPrimary: '#1677FF',
   layout: 'side',
@@ -17,7 +17,7 @@ export default {
   menuHeader: true,
   footer: false,
   colorWeak: false,
-  multiTab: false,
+  multiTab: true,
   multiTabFixed: false,
   headerHeight: 48,
   copyright: 'Ant Design Pro Vue3',
