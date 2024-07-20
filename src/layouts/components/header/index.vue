@@ -2,14 +2,14 @@
 import type { CSSProperties } from 'vue'
 
 const headerStyle = computed<CSSProperties>(() => {
-  const defaultStyle: CSSProperties = {
+  return{
     height: '48px',
     lineHeight: '48px',
     paddingInline: 0,
     zIndex: 19
   }
-  return defaultStyle
 })
+
 </script>
 
 <template>
