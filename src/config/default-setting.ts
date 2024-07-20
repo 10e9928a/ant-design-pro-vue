@@ -5,7 +5,6 @@ export default {
   logo: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
   collapsed: false,
   colorPrimary: '#1677FF',
-  colorWeak: false,
   multiTab: true,
   multiTabFixed: false,
 } as LayoutSetting
