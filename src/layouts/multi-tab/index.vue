@@ -8,7 +8,7 @@ const tabStyle = computed<CSSProperties>(() => {
   const style: CSSProperties = {}
   if (layoutSetting.value.multiTabFixed) {
     style.position = 'fixed'
-    style.top = `${layoutSetting.value.headerHeight}px`
+    style.top = '48px'
     style.zIndex = 1
   }
   return style

@@ -8,7 +8,6 @@ export interface ProLayoutProviderMethods {
 const layoutStateFunc = (props: ProLayoutProps, methods: ProLayoutProviderMethods = {}) => {
   const logo = computed(() => props.logo)
   const title = computed(() => props.title)
-  const layout = computed(() => props.layout)
   const collapsedWidth = computed(() => props.collapsedWidth)
   const siderWidth = computed(() => props.siderWidth)
   const menuData = computed(() => props.menuData)
@@ -40,7 +39,6 @@ const layoutStateFunc = (props: ProLayoutProps, methods: ProLayoutProviderMethod
   return {
     logo,
     title,
-    layout,
     collapsed,
     collapsedWidth,
     menuData,

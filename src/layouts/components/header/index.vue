@@ -1,59 +1,19 @@
 <script setup lang="ts">
 import type { CSSProperties } from 'vue'
 
-import { useLayoutState } from '../../basic-layout/context'
-const { headerHeight, fixedHeader, layout, collapsed, collapsedWidth, siderWidth } = useLayoutState()
-
 const headerStyle = computed<CSSProperties>(() => {
   const defaultStyle: CSSProperties = {
-    height: `${headerHeight.value}px`,
-    lineHeight: `${headerHeight.value}px`,
+    height: '48px',
+    lineHeight: '48px',
     paddingInline: 0,
+    zIndex: 19
   }
-  if (fixedHeader.value || layout.value === 'mix') {
-    defaultStyle.zIndex = 100
-    defaultStyle.width = '100%'
-    defaultStyle.right = 0
-  }
-  if (layout.value === 'side') {
-    if (fixedHeader.value) {
-      const width = collapsed.value ? collapsedWidth.value : siderWidth.value
-      defaultStyle.width = `calc(100% - ${width}px)`
-    }
-    defaultStyle.zIndex = 19
-  }
-
   return defaultStyle
 })
-const cls = computed(() => {
-  const classes = []
-  if (fixedHeader.value || layout.value === 'mix')
-    classes.push('ant-pro-fixed-header')
-
-  if (layout.value)
-    classes.push('ant-pro-fixed-header-action')
-
-  if (layout.value === 'mix')
-    classes.push('ant-pro-fixed-header-inverted')
-
-  return classes
-})
-const needFixed = computed(() =>
-  fixedHeader.value || layout.value === 'mix',
-)
 </script>
 
 <template>
-  <a-layout-header
-    v-if="needFixed" :style="{
-      height: `${headerHeight}px`,
-      lineHeight: `${headerHeight}px`,
-      background: 'transparent',
-    }"
-  />
-  <a-layout-header
-    :style="headerStyle" :class="cls"
-  >
+  <a-layout-header :style="headerStyle" class="ant-pro-fixed-header-action">
     <div class="ant-pro-global-header">
       <div class="flex-1">
         <slot name="headerContent" />

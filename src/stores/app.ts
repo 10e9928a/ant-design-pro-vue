@@ -9,7 +9,6 @@ export interface LayoutSetting {
   colorPrimary?: string
   multiTab?: boolean
   multiTabFixed?: boolean
-  headerHeight?: number
 }
 
 export const useAppStore = defineStore('app', () => {

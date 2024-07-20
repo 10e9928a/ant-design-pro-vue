@@ -19,24 +19,10 @@ const handleCollapsed = (collapsed: boolean) => {
 useLayoutProvider(props, {
   handleCollapsed,
 })
-
-// 自定义容器的宽高
-const contentCls = computed(() => {
-  const cls: string[] = [
-    'h-full flex flex-col flex-1',
-  ]
-  if (props.contentWidth === 'Fluid')
-    cls.push('w-full')
-
-  else if (props.contentWidth === 'Fixed')
-    cls.push(...['max-w-1200px', 'mx-auto'])
-
-  return cls
-})
 </script>
 
 <template>
-  <div class="ant-pro-basicLayout" :data-theme="theme">
+  <div class="ant-pro-basicLayout">
     <a-layout>
       <SiderMenu />
       <a-layout>
@@ -47,7 +33,7 @@ const contentCls = computed(() => {
         </Header>
         <slot name="contentPrefix" />
         <a-layout-content ref="layoutRef" class="ant-pro-basicLayout-content" flex flex-col>
-          <div :class="contentCls">
+          <div class="h-full flex flex-col flex-1 w-full">
             <slot />
           </div>
         </a-layout-content>

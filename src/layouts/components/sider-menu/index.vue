@@ -3,7 +3,7 @@ import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons-vue'
 import type { CSSProperties } from 'vue'
 import { useLayoutState } from '../../basic-layout/context'
 import Menu from '../menu/index.vue'
-const { collapsed, layout, logo, title, collapsedWidth, siderWidth, handleCollapsed } = useLayoutState()
+const { collapsed, logo, title, collapsedWidth, siderWidth, handleCollapsed } = useLayoutState()
 
 const siderStyle = computed<CSSProperties>(() => {
   return {
@@ -12,9 +12,6 @@ const siderStyle = computed<CSSProperties>(() => {
   }
 })
 
-const showLogo = computed(() => {
-  return layout.value !== 'mix'
-})
 </script>
 
 <template>
@@ -36,7 +33,7 @@ const showLogo = computed(() => {
     :collapsed-width="collapsedWidth"
     class="ant-pro-sider ant-pro-sider-fixed ant-pro-sider-layout-side"  
   >
-    <div v-if="showLogo" class="ant-pro-sider-logo" :class="(collapsed) ? 'ant-pro-sider-collapsed' : ''">
+    <div class="ant-pro-sider-logo" :class="(collapsed) ? 'ant-pro-sider-collapsed' : ''">
       <a>
         <img :src="logo">
         <h1 v-if="!collapsed">{{ title }}</h1>
