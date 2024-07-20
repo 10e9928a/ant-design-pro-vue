@@ -11,11 +11,8 @@ const layoutStateFunc = (props: ProLayoutProps, methods: ProLayoutProviderMethod
   const collapsedWidth = computed(() => props.collapsedWidth)
   const siderWidth = computed(() => props.siderWidth)
   const menuData = computed(() => props.menuData)
-  const fixedHeader = computed(() => props.fixedHeader)
-  const fixedSider = computed(() => props.fixedSider)
   const collapsed = computed(() => props.collapsed)
   const menu = computed(() => props.menu)
-  const menuHeader = computed(() => props.menuHeader)
 
   /**
    * 菜单选中处理
@@ -41,15 +38,12 @@ const layoutStateFunc = (props: ProLayoutProps, methods: ProLayoutProviderMethod
     collapsedWidth,
     menuData,
     siderWidth,
-    fixedHeader,
-    fixedSider,
     menu,
     openKeys,
     handleOpenKeys,
     selectedKeys,
     handleSelectedKeys,
     handleMenuSelect,
-    menuHeader,
     ...methods,
   }
 }

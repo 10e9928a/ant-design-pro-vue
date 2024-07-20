@@ -15,7 +15,7 @@ const { avatar, nickname } = storeToRefs(useUserStore())
           <template #icon>
             <UserOutlined />
           </template>
-          <a target="_blank" rel="noopener noreferrer" href="http://www.alipay.com/">
+          <a target="_blank" rel="noopener noreferrer" href="#">
             个人中心
           </a>
         </a-menu-item>
@@ -23,7 +23,7 @@ const { avatar, nickname } = storeToRefs(useUserStore())
           <template #icon>
             <ProfileOutlined />
           </template>
-          <a target="_blank" rel="noopener noreferrer" href="http://www.taobao.com/">
+          <a target="_blank" rel="noopener noreferrer" href="#">
             个人设置
           </a>
         </a-menu-item>

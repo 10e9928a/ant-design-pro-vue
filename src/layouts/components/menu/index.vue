@@ -7,11 +7,11 @@ const {collapsed, menuData, selectedKeys, openKeys, handleOpenKeys, handleSelect
 
 <template>
   <a-menu
-    :selected-keys="selectedKeys"
-    :open-keys="openKeys"
-    mode="inline"
     theme="dark"
+    mode="inline"
+    :open-keys="openKeys"
     :collapsed="collapsed"
+    :selected-keys="selectedKeys"
     class="ant-pro-sider-menu"
     @update:openKeys="handleOpenKeys"
     @update:selectedKeys="handleSelectedKeys"

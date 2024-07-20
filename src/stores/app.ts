@@ -3,8 +3,8 @@ import { theme as antdTheme } from 'ant-design-vue/es'
 import defaultSetting from '~@/config/default-setting'
 
 export interface LayoutSetting {
-  title?: string
   logo?: string
+  title?: string
   collapsed: boolean
   colorPrimary?: string
   multiTab?: boolean
@@ -16,7 +16,7 @@ export const useAppStore = defineStore('app', () => {
   const themeConfig = reactive<ThemeConfig>({
     algorithm: antdTheme.defaultAlgorithm,
     token: {
-      colorBgContainer: '#fff',
+      colorBgContainer: '#FFFFFF',
       colorPrimary: layoutSetting.colorPrimary,
     },
     components: {},

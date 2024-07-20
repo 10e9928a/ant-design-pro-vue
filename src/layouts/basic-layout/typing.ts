@@ -64,7 +64,6 @@ export const proLayoutProps = {
   header: booleanType<boolean>(true),
   footer: booleanType<boolean>(true),
   menu: booleanType<boolean>(true),
-  menuHeader: booleanType<boolean>(true),
   // 展开菜单
   openKeys: arrayType<string[]>(),
   // 选中菜单
