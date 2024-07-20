@@ -3,23 +3,14 @@ import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons-vue'
 import type { CSSProperties } from 'vue'
 import { useLayoutState } from '../../basic-layout/context'
 import Menu from '../menu/index.vue'
-const { collapsed, handleCollapsed, layout, logo, theme, title, collapsedWidth, siderWidth, headerHeight, fixedSider } = useLayoutState()
-
-const prefixCls = shallowRef('ant-pro-sider')
+const { collapsed, layout, logo, title, collapsedWidth, siderWidth, handleCollapsed } = useLayoutState()
 
 const siderStyle = computed<CSSProperties>(() => {
   return {
-    paddingTop: `${(layout.value !== 'side') ? headerHeight.value : 0}px`,
-    transition: 'background-color 0.3s ease 0s, min-width 0.3s ease 0s, max-width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s',
     overflow: 'hidden',
+    transition: 'background-color 0.3s ease 0s, min-width 0.3s ease 0s, max-width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s',
   }
 })
-
-const cls = computed(() => ({
-  [prefixCls.value]: true,
-  [`${prefixCls.value}-fixed`]: fixedSider.value,
-  [`${prefixCls.value}-layout-${layout.value}`]: !!layout.value,
-}))
 
 const showLogo = computed(() => {
   return layout.value !== 'mix'
@@ -28,7 +19,7 @@ const showLogo = computed(() => {
 
 <template>
   <div
-    v-if="fixedSider" :style="{
+    :style="{
       width: collapsed ? `${collapsedWidth}px` : `${siderWidth}px`,
       maxWidth: collapsed ? `${collapsedWidth}px` : `${siderWidth}px`,
       minWidth: collapsed ? `${collapsedWidth}px` : `${siderWidth}px`,
@@ -36,14 +27,14 @@ const showLogo = computed(() => {
     }"
   />
   <a-layout-sider
-    :theme="theme === 'inverted' ? 'dark' : 'light'"
-    :collapsed="collapsed"
-    :trigger="null"
-    :collapsed-width="collapsedWidth"
-    :width="siderWidth"
+    theme="dark"
     collapsible
-    :class="cls"
+    :trigger="null"
+    :collapsed="collapsed"
+    :width="siderWidth"
     :style="siderStyle"
+    :collapsed-width="collapsedWidth"
+    class="ant-pro-sider ant-pro-sider-fixed ant-pro-sider-layout-side"  
   >
     <div v-if="showLogo" class="ant-pro-sider-logo" :class="(collapsed) ? 'ant-pro-sider-collapsed' : ''">
       <a>
@@ -54,12 +45,12 @@ const showLogo = computed(() => {
     <div class="flex-1 of-x-hidden of-y-auto">
       <Menu />
     </div>
-    <div class="w-100% flex-shrink-0 ant-pro-sider-collapsed-button" :class="theme === 'inverted' ? 'ant-pro-sider-collapsed-button-inverted' : ''">
+    <div class="w-100% flex-shrink-0 ant-pro-sider-collapsed-button ant-pro-sider-collapsed-button-inverted">
       <a-menu
-        class="ant-pro-sider-menu"
         mode="inline"
-        :theme="theme === 'inverted' ? 'dark' : 'light'"
+        theme="dark"
         :selectable="false"
+        class="ant-pro-sider-menu"
         @click="handleCollapsed?.(!collapsed)"
       >
         <a-menu-item>

@@ -49,7 +49,6 @@ const proLayoutEvents = {
 }
 
 export const proLayoutProps = {
-  layout: stringType<LayoutType>('mix'),
   logo: stringType(),
   title: stringType(),
   collapsedWidth: numberType(48),
@@ -60,7 +59,6 @@ export const proLayoutProps = {
   fixedSider: booleanType<boolean>(true),
   splitMenus: booleanType(),
   collapsed: booleanType<boolean>(false),
-  theme: stringType<ThemeType>('light'),
   onCollapsed: eventType<(collapsed: boolean) => void>(),
   contentWidth: stringType<ContentWidth>(),
   header: booleanType<boolean>(true),

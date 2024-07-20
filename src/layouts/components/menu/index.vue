@@ -2,20 +2,15 @@
 import { useLayoutState } from '../../basic-layout/context'
 import SubMenu from './sub-menu.vue'
 
-const { theme, collapsed, layout, menuData, selectedKeys, openKeys, handleOpenKeys, handleSelectedKeys } = useLayoutState()
-const menuTheme = computed(() => {
-  if (theme.value === 'inverted')
-    return 'dark'
-  return theme.value
-})
+const {collapsed, menuData, selectedKeys, openKeys, handleOpenKeys, handleSelectedKeys } = useLayoutState()
 </script>
 
 <template>
   <a-menu
     :selected-keys="selectedKeys"
     :open-keys="openKeys"
-    :mode="(layout === 'top') ? 'horizontal' : 'inline'"
-    :theme="menuTheme"
+    mode="inline"
+    theme="dark"
     :collapsed="collapsed"
     class="ant-pro-sider-menu"
     @update:openKeys="handleOpenKeys"

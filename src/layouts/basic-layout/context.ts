@@ -15,14 +15,9 @@ const layoutStateFunc = (props: ProLayoutProps, methods: ProLayoutProviderMethod
   const fixedHeader = computed(() => props.fixedHeader)
   const fixedSider = computed(() => props.fixedSider)
   const collapsed = computed(() => props.collapsed)
-  const theme = computed(() => props.theme)
   const headerHeight = computed(() => props.headerHeight)
-  const contentWidth = computed(() => props.collapsedWidth)
-  const copyright = computed(() => props.copyright)
-
   const header = computed(() => props.header)
   const menu = computed(() => props.menu)
-  const footer = computed(() => props.footer)
   const menuHeader = computed(() => props.menuHeader)
 
   /**
@@ -41,6 +36,7 @@ const layoutStateFunc = (props: ProLayoutProps, methods: ProLayoutProviderMethod
   const handleMenuSelect = (data: MenuSelectEvent) => {
     runEvent(props.onMenuSelect, data)
   }
+
   return {
     logo,
     title,
@@ -52,12 +48,8 @@ const layoutStateFunc = (props: ProLayoutProps, methods: ProLayoutProviderMethod
     fixedHeader,
     fixedSider,
     headerHeight,
-    theme,
-    contentWidth,
-    copyright,
     header,
     menu,
-    footer,
     openKeys,
     handleOpenKeys,
     selectedKeys,

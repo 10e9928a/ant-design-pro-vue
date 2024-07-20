@@ -11,7 +11,6 @@ const tabStyle = computed<CSSProperties>(() => {
     style.top = `${layoutSetting.value.headerHeight}px`
     style.zIndex = 1
   }
-
   return style
 })
 const tabsRef = shallowRef()
