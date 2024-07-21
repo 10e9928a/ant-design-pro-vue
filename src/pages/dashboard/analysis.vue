@@ -4,7 +4,7 @@ import { useAnalysis } from './hooks/useAnalysis'
 const {
   isLoading,
   openNotification,
-  onOpenLik,
+  onOpenFormEdit,
   getUserList,
 } = useAnalysis()
 </script>
@@ -17,8 +17,8 @@ const {
     <a-button class="ml-2" :loading="isLoading" @click="getUserList">
       接口请求
     </a-button>
-    <a-button class="ml-2" @click="onOpenLik('111')">
-      按钮1
+    <a-button class="ml-2" @click="onOpenFormEdit('111')">
+      编辑表单
     </a-button>
   </div>
 </template>

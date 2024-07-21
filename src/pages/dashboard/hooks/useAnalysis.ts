@@ -15,7 +15,7 @@ export const useAnalysis = () => {
   }
 
   const router = useRouter()
-  const onOpenLik = (id: string) => {
+  const onOpenFormEdit = (id: string) => {
     router.push({
       path: '/form/edit',
       query: {
@@ -42,7 +42,7 @@ export const useAnalysis = () => {
   return {
     isLoading,
     openNotification,
-    onOpenLik,
+    onOpenFormEdit,
     getUserList,
   }
 }

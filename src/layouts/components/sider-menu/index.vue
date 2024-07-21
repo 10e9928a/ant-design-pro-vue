@@ -11,7 +11,6 @@ const siderStyle = computed<CSSProperties>(() => {
     transition: 'background-color 0.3s ease 0s, min-width 0.3s ease 0s, max-width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s',
   }
 })
-
 </script>
 
 <template>
@@ -31,7 +30,7 @@ const siderStyle = computed<CSSProperties>(() => {
     :style="siderStyle"
     :collapsed="collapsed"
     :collapsed-width="collapsedWidth"
-    class="ant-pro-sider ant-pro-sider-fixed ant-pro-sider-layout-side"  
+    class="ant-pro-sider ant-pro-sider-fixed ant-pro-sider-layout-side"
   >
     <div class="ant-pro-sider-logo" :class="(collapsed) ? 'ant-pro-sider-collapsed' : ''">
       <a>

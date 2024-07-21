@@ -35,6 +35,5 @@ const layoutProps = appStore.layoutSetting
         <component :is="Component" />
       </template>
     </RouterView>
-
   </BasicLayout>
 </template>
