@@ -1,4 +1,4 @@
-import router from '~/router'
+import router from '@/router'
 
 router.beforeEach(async (to, _, next) => {
   // 获取

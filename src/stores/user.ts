@@ -1,6 +1,6 @@
-import type { MenuData } from '~@/layouts/basic-layout/typing'
-import dynamicRoutes, { rootRoute } from '~@/router/dynamic-routes'
-import { genRoutes } from '~@/router/generate-route'
+import type { MenuData } from '@/layouts/basic-layout/typing'
+import dynamicRoutes, { rootRoute } from '@/router/dynamic-routes'
+import { genRoutes } from '@/router/generate-route'
 
 export const useUserStore = defineStore('user', () => {
   const routerData = shallowRef()
