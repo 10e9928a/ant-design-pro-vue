@@ -1,11 +1,11 @@
 import type { RouteRecordRaw } from 'vue-router'
 export const ROOT_ROUTE_REDIRECT_PATH = '/dashboard'
-const Layout = () => import('~/layouts/index.vue')
+const Layout = () => import('@/layouts/index.vue')
 const basicRouteMap = {
   // iframe模式下使用
-  Iframe: () => import('~/pages/common/iframe.vue'),
+  Iframe: () => import('@/pages/common/iframe.vue'),
   // 一般用于存在子集的页面
-  RouteView: () => import('~/pages/common/route-view.vue'),
+  RouteView: () => import('@/pages/common/route-view.vue'),
 }
 export const rootRoute: RouteRecordRaw = {
   path: '/',
@@ -29,7 +29,7 @@ export default [
       {
         path: '/dashboard/analysis',
         name: 'DashboardAnalysis',
-        component: () => import('~/pages/dashboard/analysis.vue'),
+        component: () => import('@/pages/dashboard/analysis.vue'),
         meta: {
           title: '分析页',
         },
@@ -49,7 +49,7 @@ export default [
       {
         path: '/form/basic',
         name: 'FormBasic',
-        component: () => import('~/pages/form/basic.vue'),
+        component: () => import('@/pages/form/basic.vue'),
         meta: {
           title: '基础表单',
         },
@@ -57,7 +57,7 @@ export default [
       {
         path: '/form/edit',
         name: 'FormEdit',
-        component: () => import('~/pages/form/edit.vue'),
+        component: () => import('@/pages/form/edit.vue'),
         meta: {
           hideInMenu: true,
           keepAlive: false,

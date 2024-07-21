@@ -1,8 +1,9 @@
-import type { LayoutSetting } from '~@/stores/app'
+import type { LayoutSetting } from '@/stores/app'
 
-export default {
+export const defaultSetting = {
+  title: 'Maple 测试平台',
+  theme: 'inverted',
   logo: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
-  title: 'Ant Design Pro',
   collapsed: true,
   colorPrimary: '#1677FF',
   multiTab: true,

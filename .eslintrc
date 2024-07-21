@@ -1,6 +1,7 @@
 {
   "extends":"@mistjs/eslint-config-vue",
   "rules": {
-    "no-console":"off"
+    "no-console":"off",
+    "@typescript-eslint/brace-style": "error"
   }
 }

@@ -1,8 +1,8 @@
+import { notification } from 'ant-design-vue/es'
 import type { AxiosError, AxiosRequestConfig, AxiosResponse, InternalAxiosRequestConfig } from 'axios'
 import axios from 'axios'
-import { notification } from 'ant-design-vue/es'
-import { STORAGE_AUTHORIZE_KEY, useAuthorization } from '~/composables/authorization'
-import router from '~/router'
+import router from '@/router'
+import { STORAGE_AUTHORIZE_KEY, useAuthorization } from '@/composables/authorization'
 
 export interface ResponseBody<T = any> {
   code: number
