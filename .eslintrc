@@ -3,6 +3,5 @@
   "rules": {
     "no-console":"off",
     "@typescript-eslint/brace-style": "error"
-  },
-  "vue/v-on-event-hyphenation": "never"
+  }
 }
