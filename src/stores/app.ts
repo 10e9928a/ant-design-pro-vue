@@ -1,6 +1,6 @@
 import type { ThemeConfig } from 'ant-design-vue/es/config-provider/context'
 import { theme as antdTheme } from 'ant-design-vue/es'
-import { defaultSetting } from '@/config'
+import { defaultSetting } from '@/config/default-setting'
 
 export interface LayoutSetting {
   logo?: string
