@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { AlipayCircleFilled, LockOutlined, MobileOutlined, TaobaoCircleFilled, UserOutlined, WeiboCircleFilled } from '@ant-design/icons-vue'
+import { LockOutlined, MobileOutlined, UserOutlined } from '@ant-design/icons-vue'
 const router = useRouter()
 const loginModel = reactive({
   username: undefined,
@@ -7,11 +7,9 @@ const loginModel = reactive({
   mobile: undefined,
   code: undefined,
   type: 'account',
-  remember: true,
 })
 const formRef = shallowRef()
 const codeLoading = shallowRef(false)
-const antdToken = useAntdToken()
 const resetCounter = 60
 const submitLoading = shallowRef(false)
 
@@ -67,16 +65,6 @@ const submit = async () => {
   <div class="login-container">
     <div class="login-content">
       <div class="ant-pro-form-login-cotainer">
-        <div class="ant-pro-form-login-top">
-          <div class="ant-pro-form-login-header">
-            <span class="ant-pro-form-login-title">
-              Ant Design
-            </span>
-          </div>
-          <div class="ant-pro-form-login-desc">
-            Ant Design 是西湖区最具影响力的 Web 设计规范
-          </div>
-        </div>
         <div class="ant-pro-form-login-main" w-335px>
           <a-form ref="formRef" :model="loginModel">
             <a-tabs v-model:activeKey="loginModel.type" centered>
@@ -128,22 +116,10 @@ const submit = async () => {
                 </div>
               </a-form-item>
             </template>
-            <div class="mb-24px" flex items-center justify-between>
-              <a-checkbox v-model:checked="loginModel.remember">
-                自动登录
-              </a-checkbox>
-              <a>忘记密码 ?</a>
-            </div>
             <a-button type="primary" block :loading="submitLoading" size="large" @click="submit">
               登录
             </a-button>
           </a-form>
-          <div class="ant-pro-form-login-other" text-14px>
-            其他登录方式:
-            <AlipayCircleFilled class="icon" />
-            <TaobaoCircleFilled class="icon" />
-            <WeiboCircleFilled class="icon" />
-          </div>
         </div>
       </div>
     </div>
@@ -224,7 +200,12 @@ const submit = async () => {
 .ant-pro-form-login-main {
   min-width: 328px;
   max-width: 500px;
-  margin: 0 auto
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  padding: 30px;
+  margin-top: 30px;
+  padding-bottom: 50px;
+  border-radius: 6px
 }
 
 .ant-pro-form-login-main {
@@ -245,10 +226,6 @@ const submit = async () => {
     vertical-align: middle;
     cursor: pointer;
     transition: color .3s;
-
-    &:hover{
-      color: v-bind('antdToken.colorPrimary');
-    }
   }
 }
 
@@ -265,7 +242,7 @@ const submit = async () => {
   }
 
   .ant-pro-form-login-cotainer{
-    padding:32px 0 24px;
+    padding: 100px 0 24px;
     background-repeat: no-repeat;
     background-position: center 110px;
     background-size: 100%

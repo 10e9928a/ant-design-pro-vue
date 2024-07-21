@@ -20,13 +20,12 @@ const { height } = useElementSize(tabsRef)
 <template>
   <div v-if="layoutSetting.multiTabFixed" :style="{ height: `${height + 10}px` }" />
   <a-tabs
-    ref="tabsRef"
-    :active-key="activeKey"
-    :style="tabStyle"
-    class="bg-white dark:bg-#242525 w-100%"
-    pt-10px
     type="card"
+    ref="tabsRef"
+    :style="tabStyle"
     :tab-bar-gutter="5"
+    :active-key="activeKey"
+    class="bg-white dark:bg-#242525 w-100% pt-10px"
     @update:active-key="multiTabStore.switchTab"
   >
     <a-tab-pane v-for="item in list" :key="item.fullPath">
@@ -41,10 +40,10 @@ const { height } = useElementSize(tabsRef)
       </template>
     </a-tab-pane>
     <template #leftExtra>
-      <div class="w-24px" />
+      <div class="w-12px" />
     </template>
     <template #rightExtra>
-      <div class="w-48px" />
+      <div class="w-24px" />
     </template>
   </a-tabs>
 </template>

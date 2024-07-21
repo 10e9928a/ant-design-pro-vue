@@ -18,7 +18,7 @@ const headerStyle = computed<CSSProperties>(() => {
       <div class="flex-1">
         <slot name="headerContent" />
       </div>
-      <a-space align="center" flex-shrink-0>
+      <a-space flex-shrink-0>
         <slot name="headerActions" />
       </a-space>
     </div>

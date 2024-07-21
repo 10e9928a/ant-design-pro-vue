@@ -27,9 +27,9 @@ const siderStyle = computed<CSSProperties>(() => {
     theme="dark"
     collapsible
     :trigger="null"
-    :collapsed="collapsed"
     :width="siderWidth"
     :style="siderStyle"
+    :collapsed="collapsed"
     :collapsed-width="collapsedWidth"
     class="ant-pro-sider ant-pro-sider-fixed ant-pro-sider-layout-side"  
   >
@@ -44,8 +44,8 @@ const siderStyle = computed<CSSProperties>(() => {
     </div>
     <div class="w-100% flex-shrink-0 ant-pro-sider-collapsed-button ant-pro-sider-collapsed-button-inverted">
       <a-menu
-        mode="inline"
         theme="dark"
+        mode="inline"
         :selectable="false"
         class="ant-pro-sider-menu"
         @click="handleCollapsed?.(!collapsed)"

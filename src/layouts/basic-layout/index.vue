@@ -6,16 +6,11 @@ import { useLayoutProvider } from './context'
 const props = defineProps(proLayoutProps)
 const emit = defineEmits(['update:collapsed'])
 
-/**
- * 处理展开收起的事件参数
- * @param collapsed 展开收起的事件参数
- */
 const handleCollapsed = (collapsed: boolean) => {
   emit('update:collapsed', collapsed)
   props?.onCollapsed?.(collapsed)
 }
 
-// 依赖注入所有的配置项，对属性进行控制，减少传值
 useLayoutProvider(props, {
   handleCollapsed,
 })
@@ -33,7 +28,7 @@ useLayoutProvider(props, {
         </Header>
         <slot name="contentPrefix" />
         <a-layout-content ref="layoutRef" class="ant-pro-basicLayout-content" flex flex-col>
-          <div class="h-full flex flex-col flex-1 w-full">
+          <div h-full flex flex-col flex-1 w-full>
             <slot />
           </div>
         </a-layout-content>

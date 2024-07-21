@@ -8,15 +8,12 @@ export interface ProLayoutProviderMethods {
 const layoutStateFunc = (props: ProLayoutProps, methods: ProLayoutProviderMethods = {}) => {
   const logo = computed(() => props.logo)
   const title = computed(() => props.title)
-  const collapsedWidth = computed(() => props.collapsedWidth)
-  const siderWidth = computed(() => props.siderWidth)
-  const menuData = computed(() => props.menuData)
   const collapsed = computed(() => props.collapsed)
+  const collapsedWidth = computed(() => props.collapsedWidth)
   const menu = computed(() => props.menu)
+  const menuData = computed(() => props.menuData)
+  const siderWidth = computed(() => props.siderWidth)
 
-  /**
-   * 菜单选中处理
-   */
   const openKeys = computed(() => props.openKeys)
   const selectedKeys = computed(() => props.selectedKeys)
   const handleOpenKeys = (val: string[]) => {
@@ -36,9 +33,9 @@ const layoutStateFunc = (props: ProLayoutProps, methods: ProLayoutProviderMethod
     title,
     collapsed,
     collapsedWidth,
+    menu,
     menuData,
     siderWidth,
-    menu,
     openKeys,
     handleOpenKeys,
     selectedKeys,

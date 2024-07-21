@@ -47,10 +47,10 @@ export const proLayoutProps = {
   title: stringType(),
   collapsed: booleanType<boolean>(false),
   collapsedWidth: numberType(48),
-  siderWidth: numberType(234),
-  menuData: arrayType<MenuData>(),
-  onCollapsed: eventType<(collapsed: boolean) => void>(),
   menu: booleanType<boolean>(true),
+  menuData: arrayType<MenuData>(),
+  siderWidth: numberType(234),
+  onCollapsed: eventType<(collapsed: boolean) => void>(),
   // 展开菜单
   openKeys: arrayType<string[]>(),
   // 选中菜单

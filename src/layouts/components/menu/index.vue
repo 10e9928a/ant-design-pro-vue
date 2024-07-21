@@ -15,7 +15,6 @@ const {collapsed, menuData, selectedKeys, openKeys, handleOpenKeys, handleSelect
     class="ant-pro-sider-menu"
     @update:openKeys="handleOpenKeys"
     @update:selectedKeys="handleSelectedKeys"
-
   >
     <template v-for="item in menuData" :key="item.path">
       <template v-if="!item.hideInMenu">
