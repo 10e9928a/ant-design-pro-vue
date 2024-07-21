@@ -1,39 +1,7 @@
 {
-  // ========== Editor ==========
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.fontFamily": "Input Mono, monospace",
-  "workbench.colorTheme": "One Dark Theme",
-  "editor.fontSize": 14,
-  "editor.fontWeight": "400",
-  "editor.lineHeight": 24,
-  "editor.letterSpacing": 0.5,
-  "editor.rulers": [
-    80,
-    120
-  ],
-  "editor.tabCompletion": "off",
-  // "editor.wordWrap": "on",
-  // "editor.wordWrapColumn": 80,
-  // "editor.wrappingIndent": "same",
-  "editor.minimap.enabled": true,
-  "editor.minimap.renderCharacters": false,
-  "editor.minimap.maxColumn": 80,
-  "editor.minimap.showSlider": "always",
-  "editor.minimap.side": "right",
-  "editor.hover.enabled": true,
-  "editor.hover.sticky": true,
-  "editor.hover.delay": 100,
-  "editor.selectionHighlight": true,
-  "editor.occurrencesHighlight": "multiFile",
-  "editor.formatOnSave": false,
-  "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
-  "editor.tabSize": 2,
-  "editor.unicodeHighlight.invisibleCharacters": false,
-  "editor.stickyScroll.enabled": true,
-  // ========== Extensions ==========
   "eslint.enable": true,
   "prettier.enable": true,
-  "prettier.printWidth": 80,
+  "prettier.printWidth": 120,
   "prettier.semi": true,
   "prettier.singleQuote": false,
   "editor.codeActionsOnSave": {
@@ -74,37 +42,23 @@
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-  },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[vue]": {
     "editor.defaultFormatter": "Vue.volar"
   },
-  // ========== Workbench ==========
-  "terminal.integrated.fontFamily": "Input Mono, Mononoki Nerd Font",
-  "security.workspace.trust.untrustedFiles": "open",
-  "security.workspace.trust.enabled": true,
-  "workbench.tree.indent": 10,
-  "workbench.iconTheme": "vscode-icons",
-  "remote.SSH.remotePlatform": {
-    "unbuntu": "linux"
-  },
-  // ========== Languages ==========
   "[dart]": {
     "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "editor.rulers": [
-      80
+      120
     ],
     "editor.selectionHighlight": false,
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": "off"
   },
-  "hediet.vscode-drawio.resizeImages": null,
   "files.associations": {
     "*.ejs": "html",
     "*.cjson": "jsonc",
@@ -115,6 +69,5 @@
     "ejs": "html",
     "wxml": "html"
   },
-  "minapp-vscode.disableAutoConfig": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
 }

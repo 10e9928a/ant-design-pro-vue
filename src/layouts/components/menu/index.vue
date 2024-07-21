@@ -2,7 +2,7 @@
 import { useLayoutState } from '../../basic-layout/context'
 import SubMenu from './sub-menu.vue'
 
-const {collapsed, menuData, selectedKeys, openKeys, handleOpenKeys, handleSelectedKeys } = useLayoutState()
+const { collapsed, menuData, selectedKeys, openKeys, handleOpenKeys, handleSelectedKeys } = useLayoutState()
 </script>
 
 <template>
