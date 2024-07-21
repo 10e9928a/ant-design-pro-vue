@@ -9,6 +9,6 @@ else router.replace('/')
 
 <template>
   <div>
-    <h1>Redirecting...</h1>
+    <h1>正在跳转...</h1>
   </div>
 </template>

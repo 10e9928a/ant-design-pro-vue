@@ -1,9 +1,5 @@
 <script setup lang="ts">
 import { AlipayCircleFilled, LockOutlined, MobileOutlined, TaobaoCircleFilled, UserOutlined, WeiboCircleFilled } from '@ant-design/icons-vue'
-// import GlobalLayoutFooter from '~/layouts/components/global-footer/index.vue'
-// import { loginApi } from '~/api/common/login'
-const appStore = useAppStore()
-const { layoutSetting } = storeToRefs(appStore)
 const router = useRouter()
 const loginModel = reactive({
   username: undefined,
@@ -69,24 +65,10 @@ const submit = async () => {
 
 <template>
   <div class="login-container">
-    <div class="login-lang" flex="~" items-center justify-end gap-2 px-24px>
-      <span flex items-center justify-center cursor-pointer text-16px @click="appStore.toggleTheme(layoutSetting.theme === 'dark' ? 'light' : 'dark')">
-        <!-- 亮色和暗黑模式切换按钮 -->
-        <template v-if="layoutSetting.theme === 'light'">
-          <carbon-moon />
-        </template>
-        <template v-else>
-          <carbon-sun />
-        </template>
-      </span>
-    </div>
     <div class="login-content">
       <div class="ant-pro-form-login-cotainer">
         <div class="ant-pro-form-login-top">
           <div class="ant-pro-form-login-header">
-            <span class="ant-pro-form-login-logo">
-              <img src="/logo.svg">
-            </span>
             <span class="ant-pro-form-login-title">
               Ant Design
             </span>
@@ -164,13 +146,6 @@ const submit = async () => {
           </div>
         </div>
       </div>
-    </div>
-    <div py-24px px-50px :data-theme="layoutSetting.theme" text-14px>
-      <GlobalLayoutFooter :copyright="layoutSetting.copyright">
-        <template #renderFooterLinks>
-          <footer-links />
-        </template>
-      </GlobalLayoutFooter>
     </div>
   </div>
 </template>
