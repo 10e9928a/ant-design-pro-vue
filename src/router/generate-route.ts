@@ -29,7 +29,7 @@ export const genRoutes = (routes: RouteRecordRaw[], parent?: MenuDataItem) => {
       hideInMenu: route.meta?.hideInMenu || false,
       parentKeys: route.meta?.parentKeys || [],
       isIframe: route.meta?.isIframe || false,
-      hideInBreadcrumb: route.meta?.hideInBreadcrumb || false,
+      hideInBreadcrumb: route.meta?.hideInBreadcrumb || true,
       hideChildrenInMenu: route.meta?.hideChildrenInMenu || false,
       keepAlive: route.meta?.keepAlive || false,
       name: route.name as string,
